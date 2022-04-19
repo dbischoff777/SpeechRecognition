@@ -31,11 +31,6 @@ def audio_to_text(audio):
     return text
 
 def play_sound(text):
-
-    tempfile = ""
-    if tempfile != "":
-            os.remove(tempfile)
-
     try:
         tts = gtts.gTTS(text)
         tempfile = "./temp.mp3"
@@ -54,12 +49,12 @@ if __name__ == "__main__":
         if ACTIVATION_COMMAND in command.lower():
             print("activate")
             #trigger sound to signal activation
-            play_sound("What can I do for you?")
+            play_sound("How may I help you?")
 
             note = get_audio()
             note = audio_to_text(note)
 
-            if note:
+            if note:   
                 play_sound(note)
 
                 now = datetime.now().astimezone().isoformat()

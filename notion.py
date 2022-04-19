@@ -6,7 +6,7 @@ class NotionClient:
     def __init__(self, token, db_id) -> None:
         self.db_id = db_id
         
-        self.heards = {
+        self.headers = {
             "Authorization": "Bearer " + token,
             "Content-Type": "application/json",
             "Notion-Version": "2022-02-22"
