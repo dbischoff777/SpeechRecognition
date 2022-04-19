@@ -31,6 +31,11 @@ def audio_to_text(audio):
     return text
 
 def play_sound(text):
+
+    tempfile = ""
+    if tempfile != "":
+            os.remove(tempfile)
+
     try:
         tts = gtts.gTTS(text)
         tempfile = "./temp.mp3"

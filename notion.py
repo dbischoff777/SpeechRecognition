@@ -9,11 +9,11 @@ class NotionClient:
         self.heards = {
             "Authorization": "Bearer " + token,
             "Content-Type": "application/json",
-            "Notion-Version": "2021-08-16"
+            "Notion-Version": "2022-02-22"
         }
 
     def create_page(self, description, date, status):
-        create_url = "https://api.notion.com/v1/pages"
+        create_url = 'https://api.notion.com/v1/pages'
 
         data = {
         "parent": { "database_id": self.db_id },
